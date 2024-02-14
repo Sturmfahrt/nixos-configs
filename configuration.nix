@@ -8,6 +8,7 @@
   imports = # Commenting this out until imports are needed
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      <home-manager/nixos>
     ];
   
   # Tell Nixos too look for configuration.nix here for now on. (AKA symlink /etc/nixos to /home/max/nixosConfigs)
@@ -126,5 +127,9 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
+
+  home-manager.users.max = { pkgs, ...}: {
+    home.packages = [ ];
+  };
 
 }
