@@ -10,9 +10,6 @@
       ./hardware-configuration.nix
     ];
   
-  # Tell Nixos too look for configuration.nix here for now on. (AKA symlink /etc/nixos to /home/max/nixosConfigs)
-  environment.etc.nixos.source = "/home/max/.nixosConfigs";
-  
   # Enable flakes in nixos
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
